@@ -11,14 +11,25 @@ let verifyEquals = require('../../assets/verify-equals');
 // HINTS: 
 //    - You'll need to use the split string method
 //    - A for loop might be helpful
+// go index by index once it's split, keep only the longest
 
 function f(str) {
-
-}
+    if (str.length > 0) {
+        let separated = str.split(" ");
+        let longest = separated[0];
+        for (let x = 0; x < separated.length; x++) {
+            if (separated[x].length >= longest.length) {
+                longest = separated[x];
+            }
+        }
+        return longest;
+    }
+    return "";
+};
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [" Thank God", "All the small things", "five five FIVE", "Supercalifragilisticexpialadocious", "longer word!!!"];
+let outputs = ["Thank", "things", "FIVE", "Supercalifragilisticexpialadocious", "word!!!"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

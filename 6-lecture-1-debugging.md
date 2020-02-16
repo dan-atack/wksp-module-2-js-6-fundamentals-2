@@ -110,4 +110,21 @@ _Let's talk about test-driven development a little._
 
 ### What is a test?
 
----
+// Example:
+
+// basic function:
+
+function adder(num1, num2) {
+    return num1 + num2;
+};
+
+// test function: Takes an extra parameter (the expected return for the adder function) and runs the adder function to see if it gives
+// the desired output... Returns true if so.
+
+function adderTest(x,y,z) {
+    return (adder(x,y) === z);
+};
+
+// run a test case: 
+
+adderTest(5,5,10);

@@ -22,23 +22,49 @@ function reverseString(str) {
 // Q1
 square(decrement(square(decrement(3))));
 
+//                      decrement(3) = 2
 
+//               square(2) = 4
+
+//      decrement(4) = 3
+
+// square(3) = 9
+
+9
 
 
 // Q2
 decrement(decrement(square(square(3))));
 
+//                          square(3) = 9
 
+//                  square(9) = 81
+
+//          decrement(81) = 80
+
+// decrement(80) = 79
+
+79
 
 
 // Q3
 duplicateString(reverseString("hello"));
 
+//              reverse(hello) = olleh
 
+// dup(olleh) = olleholleh
+
+"olleholleh"
 
 
 // Q4
 reverseString(duplicateString(duplicateString("foo")));
 
+                                    // dup(foo) = foofoo
 
+//                duplicateString(foofoo) = foofoofoofoo
+
+// reverse(foofoofoofoo) = oofoofoofoof
+
+"oofoofoofoof"
 

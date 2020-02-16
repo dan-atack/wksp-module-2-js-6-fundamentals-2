@@ -11,3 +11,21 @@
 // - the cells should all be square.
 // - cells should have a class of 'cell'
 // - cells should have and id of 'cell-#'
+
+const board = document.getElementById("board");
+
+board.style.display = "grid";
+board.style.width = "600px";
+board.style.height = "600px";
+board.style.gridTemplateRows = "200px 200px 200px";
+board.style.gridTemplateColumns = "200px 200px 200px";
+
+// Cell creator:
+
+for (let i = 1; i <= 9; i++) {
+    let cell = document.createElement("div");
+    cell.id = `cell-${i}`;
+    cell.classList.add("cell");
+    cell.innerText = `Cell ${i}`;
+    board.appendChild(cell);
+};

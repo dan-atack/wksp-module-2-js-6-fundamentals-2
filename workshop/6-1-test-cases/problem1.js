@@ -8,8 +8,12 @@ let verifyEquals = require('../../assets/verify-equals');
 // If the string does not have a first character, return undefined.
 
 function f(str) {
-
-}
+    if (str[0] != undefined) {
+        return str[0];
+    } else {
+        return undefined;
+    }
+};
 
 // Step 2
 // We need 5 test cases. The first input is provided.
@@ -17,6 +21,10 @@ function f(str) {
 
 let inputs = ['max', 'bacon', 'Zebra', 'lion', ''];
 let outputs = ['m', 'b', 'Z', 'l', undefined];
+
+for (let x = 0; x < inputs.length; x++) {
+    console.log(f(inputs[x]) === outputs[x]);
+};
 
 // Step 3
 // Run this file in the debugger.

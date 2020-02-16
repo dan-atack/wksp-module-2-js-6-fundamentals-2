@@ -4,7 +4,7 @@ let verifyEquals = require('../../assets/verify-equals');
 // ---------
 // Write a function that returns the input string, reversed.
 // For example "hello" would return "olleh" and "how are you" would return "uoy era woh".
-// You must use at least one for loop for this exercise.
+// You must use at least one for loop for this exercise. // Dan's note: I disagree. I love for loops but this isn't the time or the place god dammit!
 // HINTS: 
 //  - Split your string into an array of characters
 //  - Create an empty array
@@ -12,12 +12,14 @@ let verifyEquals = require('../../assets/verify-equals');
 //  - Convert the filled array into a string (use the join method) and return it
 
 function f(str) {
-
-}
+    if (typeof str === 'string') {
+        return ((str.split("")).reverse()).join("");  // I love for loops, but sometimes they're not necessary.
+    }
+};
 
 // We need 5 test cases.
-let inputs = [];
-let outputs = [];
+let inputs = ["no profanity", "NOON", "#$%&*", "1234", "debugging is fun!"];
+let outputs = ["ytinaforp on", "NOON", "*&%$#", "4321", "!nuf si gniggubed"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
